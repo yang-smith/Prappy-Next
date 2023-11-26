@@ -10,12 +10,12 @@ import { PromptKuakua, PromptRainbow } from "./prompt";
 
 const VideoComponent = ({ onEnd, src, zIndex, doubleclick, videoRef }) => {
 
-  const videoStyle = (z) => ({
+  const videoStyle = (z:number) => ({
     padding: '0px',
     cursor: 'grab',
     width: '100%',
     height: '100%',
-    position: 'fixed',
+    position: 'fixed' as 'fixed',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
