@@ -43,7 +43,7 @@ const Inputbox = ({ handleInput, inputBoxRef }) => {
   );
 };
 
-export default function Home() {
+export default function Page() {
   const [VideoSrc1, setVideoSrc1] = useState('static/videos/blink.mp4');
   const [VideoSrc2, setVideoSrc2] = useState('static/videos/open-mouse.mp4');
   const video1Ref = useRef<HTMLVideoElement>(null);
