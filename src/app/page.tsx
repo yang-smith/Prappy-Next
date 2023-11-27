@@ -3,37 +3,11 @@ import { useEffect, useRef, useState } from "react";
 import "./app.css"
 import "./globals.css"
 import Draggable_ball from "./components/draggable";
+import VideoComponent from "./components/video";
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import chat from './openai'
 import { PromptKuakua, PromptRainbow } from "./prompt";
-
-const VideoComponent = ({ onEnd, src, zIndex, doubleclick, videoRef }) => {
-
-  const videoStyle = (z:number) => ({
-    padding: '0px',
-    cursor: 'grab',
-    width: '100%',
-    height: '100%',
-    position: 'fixed' as 'fixed',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    zIndex: z,
-  });
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.load();
-    }
-  }, [src]);
-  return (
-    <video ref={videoRef} style={videoStyle(zIndex)} src={src} onDoubleClick={doubleclick}
-      controls={false} onEnded={onEnd}
-    />
-  );
-};
-
 
 
 const Inputbox = ({ handleInput, inputBoxRef }) => {
@@ -154,7 +128,7 @@ export default function Page() {
       setTimeout(() => {
         video2Ref.current?.play();
         console.log('play')
-      }, 500);
+      }, 300);
       
       try {
         const model = 'gpt-3.5-turbo'; 
@@ -184,12 +158,13 @@ export default function Page() {
       inputBoxRef.current.value = '';
     }
     setZindex1('4');
-    setVideoSrc2('static/videos/open-mouse.mp4');
     setVideoSrc1('static/videos/blink.mp4');
     setTimeout(() => {
       setZindex1('10');
       setZindex2('9');
-    }, 2000);
+      setVideoSrc2('static/videos/open-mouse.mp4');
+    }, 1000);
+    
     
   }
   return (
