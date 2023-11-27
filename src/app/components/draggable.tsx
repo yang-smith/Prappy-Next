@@ -1,9 +1,8 @@
 'use client'
-import { DndProvider } from 'react-dnd';
+import { DndProvider, DragPreviewImage } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { useDrag } from 'react-dnd';
 import { useEffect, useState } from 'react';
-// import styles from './draggable.module.css'
 
 export default function Draggable_ball({onDropAtTarget, press, visible}) {
     const [isVisible, setIsVisible] = useState(true);
@@ -11,7 +10,7 @@ export default function Draggable_ball({onDropAtTarget, press, visible}) {
     useEffect(() => {
         setIsVisible(visible);
       }, [visible]);
-    const [{ isDragging }, drag] = useDrag(() => ({
+    const [{ isDragging }, drag, preview] = useDrag(() => ({
         type: 'ball',
         item: 'ball',
         end: (item, monitor) => {
@@ -34,16 +33,18 @@ export default function Draggable_ball({onDropAtTarget, press, visible}) {
     let imgsrc = isPressed ? '/static/img/big-ball.png' : '/static/img/small-ball.png';
 
     return (
+        <>
+        {/* <DragPreviewImage connect={preview} src={boxImage} /> */}
         <div>
             {isVisible && (
                 <div ref={drag}
                     onMouseDown={onMouseDown}
                     onMouseUp={onMouseUp}
                     style={{
-                        opacity: isDragging ? 0 : 100,
+                        opacity: isDragging ? 0 : 1,
                         width: '200px',
                         height: '200px',
-                        borderRadius: '50%',
+                        // borderRadius: '50%',
                         //   backgroundColor: 'red',
                         cursor: 'grab',
                         position: 'fixed',
@@ -55,6 +56,8 @@ export default function Draggable_ball({onDropAtTarget, press, visible}) {
             )}
             <TargetArea />
         </div>
+        </>
+
     );
 }
 
