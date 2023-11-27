@@ -1,5 +1,5 @@
 const OPENAI_API_TYPE = 'openai';
-const DEFAULT_TEMPERATURE = 0.1;
+const DEFAULT_TEMPERATURE = 0.5;
 const DEFAULT_URL = process.env.OPENAI_API_BASE ? process.env.OPENAI_API_BASE : 'https://api.openai.com/v1/completions';
 const KEY = process.env.OPENAI_API_KEY;
 const DEFAULT_SYSTEM_PROMPT = 'you are a helpful assistant';
