@@ -1,0 +1,84 @@
+.img {
+    z-index: 0;
+}
+
+.yuqianli-adria-gmail {
+    color: #1e1e1e;
+    font-family: "Inter", Helvetica;
+    font-size: 10px;
+    font-weight: 400;
+    left: 72.8%;
+    letter-spacing: -0.35px;
+    line-height: 15px;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    z-index: 3;
+}
+
+.wrq {
+    color: #1e1e1e;
+    font-family: "Inter", Helvetica;
+    font-size: 10px;
+    font-weight: 400;
+    left: 15.4%;
+    letter-spacing: -0.35px;
+    line-height: 15px;
+    position: absolute;
+    top: 86%;
+    width: auto;
+}
+
+.jqs {
+    color: #1e1e1e;
+    font-family: "Inter", Helvetica;
+    font-size: 10px;
+    font-weight: 400;
+    left: 20.3%;
+    letter-spacing: -0.35px;
+    line-height: 15px;
+    position: absolute;
+    top: 44%;
+    width: auto;
+}
+
+.jomosis-gmail {
+    color: #1e1e1e;
+    font-family: "Inter", Helvetica;
+    font-size: 10px;
+    font-weight: 400;
+    left: 84.3%;
+    letter-spacing: -0.35px;
+    line-height: 15px;
+    position: absolute;
+    top: 77%;
+    width: auto;
+}
+
+.hdl {
+    color: #1e1e1e;
+    font-family: "Inter", Helvetica;
+    font-size: 10px;
+    font-weight: 400;
+    left: 49.3%;
+    letter-spacing: -0.35px;
+    line-height: 15px;
+    position: absolute;
+    top: 57%;
+    white-space: nowrap;
+    width: auto;
+}
+
+.mly {
+    color: #1e1e1e;
+    font-family: "Inter", Helvetica;
+    font-size: 10px;
+    font-weight: 400;
+    left: 65.2%;
+    letter-spacing: -0.35px;
+    line-height: 15px;
+    position: absolute;
+    top: 96%;
+    white-space: nowrap;
+    width: auto;
+}
