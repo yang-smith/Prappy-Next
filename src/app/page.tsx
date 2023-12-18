@@ -8,6 +8,7 @@ import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import chat from './openai'
 import { PromptKuakua, PromptRainbow } from "./prompt";
+import Link from "next/link";
 
 
 const Inputbox = ({ handleInput, inputBoxRef }) => {
@@ -183,6 +184,9 @@ export default function Page() {
 
       <div id="text-output" className="cute-text-output">{answer}</div> 
       { scrollVisible && (<div ref={scrollContent} id="long-output" className="scroll-content">{longAnswer}</div> ) }
+      <Link className="about-link" href="/about">
+          创作者/creators
+      </Link>
     </div>
   )
 }

@@ -200,3 +200,12 @@
     width: 1000px;
     position: fixed;
 }
+
+.about-link {
+    font-family: 'HYQiHei-75W', Helvetica;
+    color: #903131;
+    z-index: 999;
+    right: 1%;
+    bottom: 0.5%;
+    position: fixed;
+}
