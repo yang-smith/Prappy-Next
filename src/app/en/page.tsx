@@ -72,7 +72,7 @@ export default function Page() {
         return;
       }
 
-      const model = 'gpt-4o';
+      const model = 'gpt-3.5-turbo';
       const content = PromptKuakua(questionRef.current);
       setQuestionList([...questionListRef.current, questionRef.current]);
       const messages = [{ role: 'user', content: content }];
@@ -132,7 +132,7 @@ export default function Page() {
       }, 300);
       
       try {
-        const model = 'gpt-4o'; 
+        const model = 'gpt-3.5-turbo'; 
         const content = PromptRainbow(questionListRef.current);
         const messages = [{ role: 'user', content: content }];
         const temperature = 0.5; 
@@ -185,7 +185,7 @@ export default function Page() {
       <div id="text-output" className="cute-text-output">{answer}</div> 
       { scrollVisible && (<div ref={scrollContent} id="long-output" className="scroll-content">{longAnswer}</div> ) }
       <Link className="about-link" href="/about">
-          创作者
+          creators
       </Link>
     </div>
   )
