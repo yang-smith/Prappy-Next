@@ -72,7 +72,7 @@ export default function Page() {
         return;
       }
 
-      const model = 'gpt-4o';
+      const model = 'gpt-4o-mini';
       const content = PromptKuakua(questionRef.current);
       setQuestionList([...questionListRef.current, questionRef.current]);
       const messages = [{ role: 'user', content: content }];
@@ -132,7 +132,7 @@ export default function Page() {
       }, 300);
       
       try {
-        const model = 'gpt-4o'; 
+        const model = 'gpt-4o-mini'; 
         const content = PromptRainbow(questionListRef.current);
         const messages = [{ role: 'user', content: content }];
         const temperature = 0.5; 
